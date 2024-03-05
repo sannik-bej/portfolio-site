@@ -11,51 +11,90 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="w-screen h-screen flex bg-contain">
+  <body class="w-screen h-screen flex bg-cover">
     <div
-      class="mx-auto my-auto max-h-96 container flex justify-center gap-8 bg-white/10 shadow-lg rounded-xl backdrop-blur-sm rounded p-4 border"
+      class="mx-auto my-auto min-w-3xl max-w-3xl max-h-sm flex gap-2 flex-col md:flex-row justify-center bg-white/20 shadow-lg rounded-xl backdrop-blur-sm p-4 border"
     >
-      <div id="profile" class="flex w-full">
-        <div class="w-full p-4 flex flex-col justify-center items-center gap-6 border-e-2">
-          Myself
-          <span id="name" class="text-4xl uppercase text-emerald-700"
-            >Sannik Bej</span
-          >
-          <img
-            src="img/20221102_154427_SQR.jpg"
-            alt="pfp"
-            class="rounded-full w-40 ring ring-white"
-          />
-          <div id="socials" class="flex gap-4 text-3xl">
+      <div
+        id="nav"
+        class="absolute md:-left-5 flex flex-col items-center gap-2 p-2 bg-white/90 shadow-lg rounded-xl backdrop-blur-xl border"
+      >
+        <button id="about-btn" onclick="SwapSpace(1)">
+          <i class="fa-solid fa-user text-xl hover:scale-125"></i>
+        </button>
+        <button>
+          <i
+            onclick="SwapSpace(2)"
+            class="fa-solid fa-gamepad text-xl hover:scale-125"
+          ></i>
+        </button>
+        <button>
+          <i class="fa-solid fa-heart text-xl hover:scale-125"></i>
+        </button>
+      </div>
+      <div
+        id="profile"
+        class="min-w-max p-4 flex flex-col justify-center items-center gap-6"
+      >
+        <span id="sec" class="text-xl text-red-500">Myself</span>
+        <span id="name" class="text-slate-100 text-4xl uppercase">Sannik Bej</span>
+        <img
+          src="img/20221102_154427_SQR.jpg"
+          alt="pfp"
+          class="rounded-full w-40 ring ring-white hover:shadow-xl"
+        />
+        <div id="socials" class="flex gap-2 text-3xl">
+          <div class="w-12 flex justify-center bg-white rounded-full">
             <a
               href="http://www.twitter.com/SaNniK35"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fa-brands fa-twitter text-sky-600"></i
+              ><i class="fa-brands fa-twitter text-sky-600 hover:scale-110"></i
             ></a>
+          </div>
+          <div class="w-12 flex justify-center bg-white rounded-full">
             <a
               href="http://www.github.com/sannik-bej"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fa-brands fa-github"></i
+              ><i class="fa-brands fa-github hover:scale-110"></i
             ></a>
+          </div>
+          <div class="w-12 flex justify-center bg-white rounded-full">
             <a
               href="http://www.linkedin.com/in/sannik-bej"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fa-brands fa-linkedin text-sky-800"></i
+              ><i class="fa-brands fa-linkedin text-sky-800 hover:scale-110"></i
             ></a>
           </div>
         </div>
-        <div id="about">
-
-        </div>
       </div>
-      <div id="background" class="w-full rounded-xl bg-no-repeat bg-contain">
-        <div id="works" class="h-full flex flex-col justify-center items-center p-2 rounded-xl backdrop-blur-sm">
-            My Work
+      <div
+        id="swap-space"
+        class="w-full h-full flex flex-col gap-2 items-center p-2 border border-red-500 rounded-xl"
+      >
+        <span id="sec-title" class="">About Me</span>
+        <p id="desc" class="capitalize p-2 text-sm text-center">tech / video game enthusiast. i learn quick, stay organized.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quisquam velit perferendis debitis quibusdam dolores dicta corporis ex ipsam delectus, ea cum consectetur quasi deserunt laborum, repellendus quas veniam neque.
+        </p>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="w-60 h-40 bg-white/60 rounded border"></div>
+          <div class="w-60 h-40 bg-white/60 rounded border"></div>
+          <div class="w-60 h-40 bg-white/60 rounded border"></div>
+          <div class="w-60 h-40 bg-white/60 rounded border"></div>
         </div>
+        <i class="fa-brands fa-unity text-3xl"></i>
       </div>
     </div>
+    <footer class="absolute bottom-0 w-full flex flex-col md:flex-row items-center md:justify-between text-xs">
+      <span class="bg-white/10 backdrop-blur-sm px-1 rounded"
+        >Copyright Sannik Bej 2024</span
+      >
+      <span class="bg-white/10 backdrop-blur-sm px-1 rounded"
+        >Background Image under Copyright of Nintendo Corp.</span
+      >
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
