@@ -11,17 +11,14 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="w-screen md:h-screen flex bg-contain md:bg-cover">
+  <body class="w-screen md:h-screen flex flex-col bg-contain">
     <div
       id="slab"
-      class="mx-auto my-auto container min-w-3xl max-w-4xl md:max-h-96 flex gap-2 flex-col md:flex-row md:justify-center bg-white/20 shadow-lg rounded-xl backdrop-blur-sm p-4 border"
+      class="mx-auto my-auto container min-w-3xl max-w-4xl flex gap-2 flex-col md:flex-row md:justify-center bg-white/20 shadow-lg md:rounded-xl backdrop-blur-sm p-4 border"
     >
-      <marquee class="absolute" behavior="" direction=""
-        ><img class="w-12" src="img/Goomba2-ezgif.com-gif-maker.gif" alt="" srcset=""
-      /></marquee>
       <div
         id="nav"
-        class="absolute md:-left-5 flex flex-col items-center gap-2 p-2 bg-white/90 shadow-lg rounded-xl backdrop-blur-xl border"
+        class="sticky top-2 md:-left-5 h-fit flex flex-col items-center gap-2 p-2 bg-white/90 shadow-lg rounded-full backdrop-blur-xl border"
       >
         <button id="about-btn" onclick="SwapSpace(1)">
           <i class="fa-solid fa-user text-xl hover:scale-125"></i>
@@ -38,9 +35,9 @@
       </div>
       <div
         id="profile"
-        class="min-w-max p-4 flex flex-col justify-center items-center gap-6"
+        class="min-w-max p-4 flex flex-col justify-start items-center gap-6"
       >
-        <span id="sec" class="text-xl text-red-500">Myself</span>
+        <span id="sec" class="font-bold text-xl text-rose-500">Myself</span>
         <span id="name" class="text-slate-900 text-4xl uppercase"
           >Sannik Bej</span
         >
@@ -80,30 +77,40 @@
         id="swap-space"
         class="w-full flex flex-col gap-2 items-center p-2 border border-red-500 rounded-xl overflow-y-scroll"
       >
-        <span id="sec-title" class="">About Me</span>
-        <p id="desc" class="capitalize p-2 text-sm text-center">
-          tech / video game enthusiast. i learn quick, stay organized. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Commodi quisquam
-          velit perferendis debitis quibusdam dolores dicta corporis ex ipsam
-          delectus, ea cum consectetur quasi deserunt laborum, repellendus quas
-          veniam neque.
+        <span id="sec-title" class="min-w-max font-bold text-xl text-amber-500"
+          >About Me</span
+        >
+        <marquee class="" behavior="alternate" direction=""
+          ><img
+            class="w-12"
+            src="img/Goomba2-ezgif.com-gif-maker.gif"
+            alt=""
+            srcset=""
+        /></marquee>
+
+        <p id="desc" class="capitalize text-sm text-center">
+          tech / video game enthusiast. i learn quick, stay organized.
         </p>
-        <ul class="text-sm capitalize italic">
-          things i'm curious and knowledgeable about:
-          <li><i class="fa-brands fa-unity text-xl"></i></li>
-          <li>
-            <i class="fa-solid fa-microchip text-xl"></i> computer hardwares
+        <ul id="interests" class="self-start ms-4 text-sm capitalize italic">
+          <span class="font-medium">
+            things i'm curious and knowledgeable about:
+          </span>
+          <li><i class="fa-brands fa-unity text-2xl"></i></li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-microchip text-2xl"></i> computer hardwares
           </li>
-          <li><i class="fa-solid fa-cube text-xl"></i> 3D rendering</li>
-          <li><i class="fa-solid fa-gears text-xl"></i></li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-cube text-2xl"></i> 3D rendering
+          </li>
+          <li><i class="fa-solid fa-gears text-2xl"></i></li>
         </ul>
         <div
           id="works"
-          class="w-full flex flex-col items-center rounded-xl p-2"
+          class="w-full flex flex-col items-center rounded-xl p-2 hidden"
         >
           <iframe
             id="webgl_iframe"
-            class="w-full h-[500px]"
+            class="w-full h-[620px] rounded-t-xl"
             frameborder="0"
             allow="autoplay; fullscreen; vr"
             allowfullscreen=""
@@ -115,7 +122,7 @@
           ></iframe>
           <iframe
             id="webgl_iframe"
-            class="w-full h-[500px]"
+            class="w-full h-[620px]"
             frameborder="0"
             allow="autoplay; fullscreen; vr"
             allowfullscreen=""
@@ -127,7 +134,7 @@
           ></iframe>
           <iframe
             id="webgl_iframe"
-            class="w-full h-[500px]"
+            class="w-full h-[620px] rounded-b-xl"
             frameborder="0"
             allow="autoplay; fullscreen; vr"
             allowfullscreen=""
@@ -140,15 +147,14 @@
         </div>
       </div>
     </div>
-
     <footer
-      class="fixed bottom-0 w-full flex flex-col md:flex-row items-center md:justify-between text-xs"
+      class="w-full flex flex-col md:flex-row items-center md:justify-between text-xs"
     >
-      <span class="bg-white/10 backdrop-blur-sm px-1 rounded"
-        >Copyright Sannik Bej 2024</span
+      <span class="md:bg-white/20 md:backdrop-blur-sm px-1"
+        >Copyright &copy; Sannik Bej 2024</span
       >
-      <span class="bg-white/10 backdrop-blur-sm px-1 rounded"
-        >Background Image under Copyright of Nintendo Corp.</span
+      <span class="md:bg-white/20 md:backdrop-blur-sm px-1"
+        >Background Image under Copyright of &copy; Nintendo Corp.</span
       >
     </footer>
     <script src="script.js"></script>
