@@ -11,9 +11,10 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="w-screen h-screen flex bg-cover">
+  <body class="w-screen md:h-screen flex bg-cover">
     <div
-      class="mx-auto my-auto min-w-3xl max-w-3xl max-h-sm flex gap-2 flex-col md:flex-row justify-center bg-white/20 shadow-lg rounded-xl backdrop-blur-sm p-4 border"
+      id="slab"
+      class="mx-auto my-auto container min-w-3xl max-w-3xl md:max-h-96 flex gap-2 flex-col md:flex-row md:justify-center bg-white/20 shadow-lg rounded-xl backdrop-blur-sm p-4 border"
     >
       <div
         id="nav"
@@ -37,7 +38,9 @@
         class="min-w-max p-4 flex flex-col justify-center items-center gap-6"
       >
         <span id="sec" class="text-xl text-red-500">Myself</span>
-        <span id="name" class="text-slate-100 text-4xl uppercase">Sannik Bej</span>
+        <span id="name" class="text-slate-900 text-4xl uppercase"
+          >Sannik Bej</span
+        >
         <img
           src="img/20221102_154427_SQR.jpg"
           alt="pfp"
@@ -72,22 +75,53 @@
       </div>
       <div
         id="swap-space"
-        class="w-full h-full flex flex-col gap-2 items-center p-2 border border-red-500 rounded-xl"
+        class="w-full flex flex-col gap-2 items-center p-2 border border-red-500 rounded-xl overflow-y-scroll"
       >
         <span id="sec-title" class="">About Me</span>
-        <p id="desc" class="capitalize p-2 text-sm text-center">tech / video game enthusiast. i learn quick, stay organized.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quisquam velit perferendis debitis quibusdam dolores dicta corporis ex ipsam delectus, ea cum consectetur quasi deserunt laborum, repellendus quas veniam neque.
+        <p id="desc" class="capitalize p-2 text-sm text-center">
+          tech / video game enthusiast. i learn quick, stay organized. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Commodi quisquam
+          velit perferendis debitis quibusdam dolores dicta corporis ex ipsam
+          delectus, ea cum consectetur quasi deserunt laborum, repellendus quas
+          veniam neque.
         </p>
-        <div class="grid grid-cols-2 gap-2">
-          <div class="w-60 h-40 bg-white/60 rounded border"></div>
-          <div class="w-60 h-40 bg-white/60 rounded border"></div>
-          <div class="w-60 h-40 bg-white/60 rounded border"></div>
-          <div class="w-60 h-40 bg-white/60 rounded border"></div>
+        <div class="flex flex-col items-center gap-2 rounded-xl p-2">
+          <iframe
+            id="webgl_iframe"
+            class="rounded-xl"
+            frameborder="0"
+            allow="autoplay; fullscreen; vr"
+            allowfullscreen=""
+            allowvr=""
+            mozallowfullscreen="true"
+            src="https://play.unity.com/webgl/93b9f15c-cd75-4127-a141-7b5efe9b3ff9?screenshot=false&embedType=embed"
+            width="360"
+            height="460"
+            onmousewheel=""
+            webkitallowfullscreen="true"
+          ></iframe>
+          <iframe
+            id="webgl_iframe"
+            class="rounded-xl"
+            frameborder="0"
+            allow="autoplay; fullscreen; vr"
+            allowfullscreen=""
+            allowvr=""
+            mozallowfullscreen="true"
+            src="https://play.unity.com/webgl/4e4aa5eb-8875-46e0-b23a-5ddb8107d348?screenshot=false&embedType=embed"
+            width="360"
+            height="460"
+            onmousewheel=""
+            webkitallowfullscreen="true"
+          ></iframe>
         </div>
         <i class="fa-brands fa-unity text-3xl"></i>
       </div>
     </div>
-    <footer class="absolute bottom-0 w-full flex flex-col md:flex-row items-center md:justify-between text-xs">
+
+    <footer
+      class="absolute bottom-0 w-full flex flex-col md:flex-row items-center md:justify-between text-xs"
+    >
       <span class="bg-white/10 backdrop-blur-sm px-1 rounded"
         >Copyright Sannik Bej 2024</span
       >
