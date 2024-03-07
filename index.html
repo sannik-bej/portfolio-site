@@ -11,11 +11,14 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="w-screen md:h-screen flex bg-cover">
+  <body class="w-screen md:h-screen flex bg-contain md:bg-cover">
     <div
       id="slab"
-      class="mx-auto my-auto container min-w-3xl max-w-3xl md:max-h-96 flex gap-2 flex-col md:flex-row md:justify-center bg-white/20 shadow-lg rounded-xl backdrop-blur-sm p-4 border"
+      class="mx-auto my-auto container min-w-3xl max-w-4xl md:max-h-96 flex gap-2 flex-col md:flex-row md:justify-center bg-white/20 shadow-lg rounded-xl backdrop-blur-sm p-4 border"
     >
+      <marquee class="absolute" behavior="" direction=""
+        ><img class="w-12" src="img/Goomba2-ezgif.com-gif-maker.gif" alt="" srcset=""
+      /></marquee>
       <div
         id="nav"
         class="absolute md:-left-5 flex flex-col items-center gap-2 p-2 bg-white/90 shadow-lg rounded-xl backdrop-blur-xl border"
@@ -85,42 +88,61 @@
           delectus, ea cum consectetur quasi deserunt laborum, repellendus quas
           veniam neque.
         </p>
-        <div class="flex flex-col items-center gap-2 rounded-xl p-2">
+        <ul class="text-sm capitalize italic">
+          things i'm curious and knowledgeable about:
+          <li><i class="fa-brands fa-unity text-xl"></i></li>
+          <li>
+            <i class="fa-solid fa-microchip text-xl"></i> computer hardwares
+          </li>
+          <li><i class="fa-solid fa-cube text-xl"></i> 3D rendering</li>
+          <li><i class="fa-solid fa-gears text-xl"></i></li>
+        </ul>
+        <div
+          id="works"
+          class="w-full flex flex-col items-center rounded-xl p-2"
+        >
           <iframe
             id="webgl_iframe"
-            class="rounded-xl"
+            class="w-full h-[500px]"
             frameborder="0"
             allow="autoplay; fullscreen; vr"
             allowfullscreen=""
             allowvr=""
             mozallowfullscreen="true"
             src="https://play.unity.com/webgl/93b9f15c-cd75-4127-a141-7b5efe9b3ff9?screenshot=false&embedType=embed"
-            width="360"
-            height="460"
             onmousewheel=""
             webkitallowfullscreen="true"
           ></iframe>
           <iframe
             id="webgl_iframe"
-            class="rounded-xl"
+            class="w-full h-[500px]"
             frameborder="0"
             allow="autoplay; fullscreen; vr"
             allowfullscreen=""
             allowvr=""
             mozallowfullscreen="true"
             src="https://play.unity.com/webgl/4e4aa5eb-8875-46e0-b23a-5ddb8107d348?screenshot=false&embedType=embed"
-            width="360"
-            height="460"
+            onmousewheel=""
+            webkitallowfullscreen="true"
+          ></iframe>
+          <iframe
+            id="webgl_iframe"
+            class="w-full h-[500px]"
+            frameborder="0"
+            allow="autoplay; fullscreen; vr"
+            allowfullscreen=""
+            allowvr=""
+            mozallowfullscreen="true"
+            src="https://play.unity.com/webgl/a910b043-cc3c-46c6-84d7-b7ab69329ecc?screenshot=false&embedType=embed"
             onmousewheel=""
             webkitallowfullscreen="true"
           ></iframe>
         </div>
-        <i class="fa-brands fa-unity text-3xl"></i>
       </div>
     </div>
 
     <footer
-      class="absolute bottom-0 w-full flex flex-col md:flex-row items-center md:justify-between text-xs"
+      class="fixed bottom-0 w-full flex flex-col md:flex-row items-center md:justify-between text-xs"
     >
       <span class="bg-white/10 backdrop-blur-sm px-1 rounded"
         >Copyright Sannik Bej 2024</span
