@@ -21,15 +21,15 @@ function SwapSpace(index) {
       secTitle.innerHTML = aboutSec.secTitle;
       desc.innerText = aboutSec.desc;
       works.style.display = "none";
-      interests.style.display = "block";
-      allSkills.style.display = "block";
+      interests.style.display = "flex";
+      allSkills.style.display = "flex";
       break;
     case 2:
       secTitle.innerHTML = workSec.secTitle;
       desc.innerText = workSec.desc;
       interests.style.display = "none";
       allSkills.style.display = "none";
-      works.style.display = "block";
+      works.style.display = "flex";
       break;
     default:
       break;
