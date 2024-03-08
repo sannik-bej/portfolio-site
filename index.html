@@ -12,149 +12,247 @@
     ></script>
   </head>
   <body class="w-screen md:h-screen flex flex-col bg-contain">
-    <div
-      id="slab"
-      class="mx-auto my-auto container min-w-3xl max-w-4xl flex gap-2 flex-col md:flex-row md:justify-center bg-white/20 shadow-lg md:rounded-xl backdrop-blur-sm p-4 border"
-    >
+    <main class="mx-auto my-auto md:min-w-4xl md:max-w-4xl p-2">
       <div
-        id="nav"
-        class="sticky top-2 md:-left-5 h-fit flex flex-col items-center gap-2 p-2 bg-white/90 shadow-lg rounded-full backdrop-blur-xl border"
+        id="panel"
+        class="w-full flex gap-2 flex-col md:flex-row md:justify-center bg-white/20 shadow-lg rounded-xl backdrop-blur-sm p-4 border"
       >
-        <button id="about-btn" onclick="SwapSpace(1)">
-          <i class="fa-solid fa-user text-xl hover:scale-125"></i>
-        </button>
-        <button>
-          <i
-            onclick="SwapSpace(2)"
-            class="fa-solid fa-gamepad text-xl hover:scale-125"
-          ></i>
-        </button>
-        <button>
-          <i class="fa-solid fa-heart text-xl hover:scale-125"></i>
-        </button>
-      </div>
-      <div
-        id="profile"
-        class="min-w-max p-4 flex flex-col justify-start items-center gap-6"
-      >
-        <span id="sec" class="font-bold text-xl text-rose-500">Myself</span>
-        <span id="name" class="text-slate-900 text-4xl uppercase"
-          >Sannik Bej</span
-        >
-        <img
-          src="img/20221102_154427_SQR.jpg"
-          alt="pfp"
-          class="rounded-full w-40 ring ring-white hover:shadow-xl"
-        />
-        <div id="socials" class="flex gap-2 text-3xl">
-          <div class="w-12 flex justify-center bg-white rounded-full">
-            <a
-              href="http://www.twitter.com/SaNniK35"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fa-brands fa-twitter text-sky-600 hover:scale-110"></i
-            ></a>
-          </div>
-          <div class="w-12 flex justify-center bg-white rounded-full">
-            <a
-              href="http://www.github.com/sannik-bej"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fa-brands fa-github hover:scale-110"></i
-            ></a>
-          </div>
-          <div class="w-12 flex justify-center bg-white rounded-full">
-            <a
-              href="http://www.linkedin.com/in/sannik-bej"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fa-brands fa-linkedin text-sky-800 hover:scale-110"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div
-        id="swap-space"
-        class="w-full flex flex-col gap-2 items-center p-2 border border-red-500 rounded-xl overflow-y-scroll"
-      >
-        <span id="sec-title" class="min-w-max font-bold text-xl text-amber-500"
-          >About Me</span
-        >
-        <marquee class="" behavior="alternate" direction=""
-          ><img
-            class="w-12"
-            src="img/Goomba2-ezgif.com-gif-maker.gif"
-            alt=""
-            srcset=""
-        /></marquee>
-
-        <p id="desc" class="capitalize text-sm text-center">
-          tech / video game enthusiast. i learn quick, stay organized.
-        </p>
-        <ul id="interests" class="self-start ms-4 text-sm capitalize italic">
-          <span class="font-medium">
-            things i'm curious and knowledgeable about:
-          </span>
-          <li><i class="fa-brands fa-unity text-2xl"></i></li>
-          <li class="flex items-center gap-2">
-            <i class="fa-solid fa-microchip text-2xl"></i> computer hardwares
-          </li>
-          <li class="flex items-center gap-2">
-            <i class="fa-solid fa-cube text-2xl"></i> 3D rendering
-          </li>
-          <li><i class="fa-solid fa-gears text-2xl"></i></li>
-        </ul>
         <div
-          id="works"
-          class="w-full flex flex-col items-center rounded-xl p-2 hidden"
+          id="nav"
+          class="absolute right-2 md:sticky md:top-2 w-fit h-fit flex flex-col items-center gap-2 p-2 bg-white/90 shadow-lg rounded-full backdrop-blur-xl border"
         >
-          <iframe
-            id="webgl_iframe"
-            class="w-full h-[620px] rounded-t-xl"
-            frameborder="0"
-            allow="autoplay; fullscreen; vr"
-            allowfullscreen=""
-            allowvr=""
-            mozallowfullscreen="true"
-            src="https://play.unity.com/webgl/93b9f15c-cd75-4127-a141-7b5efe9b3ff9?screenshot=false&embedType=embed"
-            onmousewheel=""
-            webkitallowfullscreen="true"
-          ></iframe>
-          <iframe
-            id="webgl_iframe"
-            class="w-full h-[620px]"
-            frameborder="0"
-            allow="autoplay; fullscreen; vr"
-            allowfullscreen=""
-            allowvr=""
-            mozallowfullscreen="true"
-            src="https://play.unity.com/webgl/4e4aa5eb-8875-46e0-b23a-5ddb8107d348?screenshot=false&embedType=embed"
-            onmousewheel=""
-            webkitallowfullscreen="true"
-          ></iframe>
-          <iframe
-            id="webgl_iframe"
-            class="w-full h-[620px] rounded-b-xl"
-            frameborder="0"
-            allow="autoplay; fullscreen; vr"
-            allowfullscreen=""
-            allowvr=""
-            mozallowfullscreen="true"
-            src="https://play.unity.com/webgl/a910b043-cc3c-46c6-84d7-b7ab69329ecc?screenshot=false&embedType=embed"
-            onmousewheel=""
-            webkitallowfullscreen="true"
-          ></iframe>
+          <button id="about-btn" onclick="SwapSpace(1)">
+            <i class="fa-solid fa-user text-xl hover:scale-125"></i>
+          </button>
+          <button>
+            <i
+              onclick="SwapSpace(2)"
+              class="fa-solid fa-gamepad text-xl hover:scale-125"
+            ></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-heart text-xl hover:scale-125"></i>
+          </button>
+        </div>
+        <div
+          id="profile"
+          class="min-w-max p-4 flex flex-col justify-start items-center gap-6"
+        >
+          <span id="sec" class="font-bold text-2xl text-rose-500">Myself</span>
+          <span id="name" class="text-slate-900 text-4xl uppercase"
+            >Sannik Bej</span
+          >
+          <img
+            src="img/20221102_154427_SQR.jpg"
+            alt="pfp"
+            class="rounded-full w-40 ring ring-white hover:shadow-xl"
+          />
+          <div id="socials" class="flex gap-2 text-3xl">
+            <div
+              class="w-12 py-1 flex justify-center items-center bg-white rounded-full"
+            >
+              <a
+                href="http://www.twitter.com/SaNniK35"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-twitter text-sky-600 hover:scale-110"></i
+              ></a>
+            </div>
+            <div
+              class="w-12 py-1 flex justify-center items-center bg-white rounded-full"
+            >
+              <a
+                href="http://www.github.com/sannik-bej"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-github hover:scale-110"></i
+              ></a>
+            </div>
+            <div
+              class="w-12 py-1 flex justify-center items-center bg-white rounded-full"
+            >
+              <a
+                href="http://www.linkedin.com/in/sannik-bej"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  class="fa-brands fa-linkedin-in text-sky-800 hover:scale-110"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          id="swap-space"
+          class="w-full flex flex-col gap-2 items-center p-2 border border-red-500 rounded-xl overflow-y-scroll"
+        >
+          <span
+            id="sec-title"
+            class="min-w-max font-bold text-2xl text-amber-400"
+            >About Me</span
+          >
+          <marquee class="" behavior="alternate" direction=""
+            ><img
+              class="w-10"
+              src="img/Goomba2-ezgif.com-gif-maker.gif"
+              alt=""
+              srcset=""
+          /></marquee>
+          <div class="flex flex-col gap-4 px-2 text-sm">
+            <p id="desc" class="capitalize text-md text-center">
+              technology / video game enthusiast. i learn quick, stay organized.
+              always looking to turn my passions into profession, if given the
+              opportunity can take a project to perfection.
+            </p>
+            <ul id="interests" class="flex flex-col gap-2 capitalize">
+              <span class="font-medium normal-case">
+                Things I'm curious and quite knowledgeable about:
+              </span>
+              <li class="flex items-center gap-2">
+                <div
+                  class="w-9 h-9 flex justify-center items-center bg-white rounded-xl"
+                >
+                  <i class="fa-solid fa-microchip text-2xl"></i>
+                </div>
+                computer hardwares
+              </li>
+              <li class="flex items-center gap-2">
+                <div
+                  class="w-9 h-9 flex justify-center items-center bg-white rounded-xl"
+                >
+                  <!-- <i class="fa-solid fa-cube text-2xl"></i> -->
+                  <i class="fa-solid fa-cubes text-2xl"></i>
+                </div>
+                3D rendering
+              </li>
+              <li class="flex items-center gap-2">
+                <div
+                  class="w-9 h-9 flex justify-center items-center bg-white rounded-xl"
+                >
+                  <i class="fa-solid fa-gears text-2xl"></i>
+                </div>
+                modding/ reverse engineering
+              </li>
+            </ul>
+            <div id="skills" class="flex flex-col gap-4">
+              <ul id="gen-skills" class="flex flex-col gap-2">
+                <span class="font-medium capitalize">generalized skills:</span>
+                <li class="flex items-center gap-2">
+                  <div
+                    class="w-10 h-8 bg-white/90 rounded-full flex justify-center items-center"
+                  >
+                    <i
+                      class="fa-brands fa-git-alt text-3xl text-orange-600"
+                    ></i>
+                  </div>
+                  proficient and worked with version control tools.
+                </li>
+                <li class="flex items-center gap-2">
+                  <div
+                    class="w-10 h-8 bg-white/90 rounded-full flex justify-center items-center"
+                  >
+                    <i class="fa-brands fa-microsoft text-xl text-sky-500"></i>
+                  </div>
+                  familiar and efficient working in windows / microsoft office
+                  suite
+                </li>
+              </ul>
+              <div id="web-skills" class="flex flex-col gap-2">
+                <span class="font-medium capitalize">web dev skills:</span>
+                <ul class="flex items-center gap-2">
+                  <li
+                    class="w-fit h-fit px-3 py-1 bg-white/90 rounded-full flex justify-center items-center"
+                  >
+                    <i class="fa-brands fa-html5 text-3xl text-orange-600"></i>
+                  </li>
+                  <li
+                    class="w-fit h-fit px-3 py-1 bg-white/90 rounded-full flex justify-center items-center"
+                  >
+                    <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+                  </li>
+                  <li
+                    class="w-fit h-fit px-3 py-1 bg-white/90 rounded-full flex justify-center items-center"
+                  >
+                    <i class="fa-brands fa-css3-alt text-3xl text-blue-600"></i>
+                  </li>
+                  <span>solid foundation in building blocks of modern web</span>
+                </ul>
+                <ul class="flex items-center gap-2">
+                  <li
+                    class="w-fit h-fit px-2 py-1 bg-white/90 rounded-full flex justify-center items-center"
+                  >
+                    <i class="fa-brands fa-react text-3xl text-cyan-700"></i>
+                  </li>
+                  <span>worked with a few advanced web frameworks</span>
+                </ul>
+              </div>
+              <div id="game-skills" class="flex flex-col gap-2">
+                <span class="font-medium capitalize">game dev skills:</span>
+                <ul class="flex items-center gap-2">
+                  <li
+                    class="w-fit h-fit px-2 py-1 bg-white/90 rounded-full flex justify-center items-center"
+                  >
+                    <i class="fa-brands fa-unity text-3xl"></i>
+                  </li>
+                  <span
+                    >the only game engine i've ever picked up on and still
+                    making virtual experiences in.</span
+                  >
+                </ul>
+              </div>
+            </div>
+            <div
+              id="works"
+              class="w-full flex flex-col items-center rounded-xl hidden"
+            >
+              <iframe
+                id="webgl_iframe"
+                class="w-full h-[490px] md:h-[620px] rounded-t-xl"
+                frameborder="0"
+                allow="autoplay; fullscreen; vr"
+                allowfullscreen=""
+                allowvr=""
+                mozallowfullscreen="true"
+                src="https://play.unity.com/webgl/93b9f15c-cd75-4127-a141-7b5efe9b3ff9?screenshot=false&embedType=embed"
+                onmousewheel=""
+                webkitallowfullscreen="true"
+              ></iframe>
+              <iframe
+                id="webgl_iframe"
+                class="w-full h-[490px] md:h-[620px]"
+                frameborder="0"
+                allow="autoplay; fullscreen; vr"
+                allowfullscreen=""
+                allowvr=""
+                mozallowfullscreen="true"
+                src="https://play.unity.com/webgl/4e4aa5eb-8875-46e0-b23a-5ddb8107d348?screenshot=false&embedType=embed"
+                onmousewheel=""
+                webkitallowfullscreen="true"
+              ></iframe>
+              <iframe
+                id="webgl_iframe"
+                class="w-full h-[490px] md:h-[620px] rounded-b-xl"
+                frameborder="0"
+                allow="autoplay; fullscreen; vr"
+                allowfullscreen=""
+                allowvr=""
+                mozallowfullscreen="true"
+                src="https://play.unity.com/webgl/a910b043-cc3c-46c6-84d7-b7ab69329ecc?screenshot=false&embedType=embed"
+                onmousewheel=""
+                webkitallowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <footer
-      class="w-full flex flex-col md:flex-row items-center md:justify-between text-xs"
-    >
-      <span class="md:bg-white/20 md:backdrop-blur-sm px-1"
+    </main>
+
+    <footer class="md:fixed bottom-0 flex md:justify-start text-xs text-center">
+      <span
+        class="w-full md:w-fit md:rounded-tr bg-white/20 backdrop-blur-sm px-1"
         >Copyright &copy; Sannik Bej 2024</span
-      >
-      <span class="md:bg-white/20 md:backdrop-blur-sm px-1"
-        >Background Image under Copyright of &copy; Nintendo Corp.</span
       >
     </footer>
     <script src="script.js"></script>

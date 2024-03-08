@@ -3,10 +3,13 @@ const aboutBtn = document.querySelector("#about-btn");
 const secTitle = document.querySelector("#sec-title");
 const desc = document.querySelector("#desc");
 const interests = document.querySelector("#interests");
+const genSkills = document.querySelector("#gen-skills");
+const webSkills = document.querySelector("#web-skills");
+const allSkills = document.querySelector("#skills");
 const works = document.querySelector("#works");
 const aboutSec = {
   secTitle: "About Me",
-  desc: "tech / video game enthusiast. i learn quick, stay organized.",
+  desc: "technology / video game enthusiast. i learn quick, stay organized. always looking to turn my passions into profession, if given the opportunity can take a project to perfection.",
 };
 const workSec = {
   secTitle: "My Works",
@@ -19,11 +22,13 @@ function SwapSpace(index) {
       desc.innerText = aboutSec.desc;
       works.style.display = "none";
       interests.style.display = "block";
+      allSkills.style.display = "block";
       break;
     case 2:
       secTitle.innerHTML = workSec.secTitle;
       desc.innerText = workSec.desc;
       interests.style.display = "none";
+      allSkills.style.display = "none";
       works.style.display = "block";
       break;
     default:
